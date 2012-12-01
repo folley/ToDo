@@ -1,7 +1,7 @@
 #import "ToDoAPIClient.h"
 #import "AFJSONRequestOperation.h"
 
-static NSString * const kToDoAPIBaseURLString = @"<# API Base URL #>";
+static NSString * const kToDoAPIBaseURLString = @"http://afternoon-wildwood-9932.herokuapp.com";
 
 @implementation ToDoAPIClient
 
