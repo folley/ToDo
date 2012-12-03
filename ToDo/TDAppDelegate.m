@@ -28,10 +28,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
     TDTasksViewController *viewController = [[TDTasksViewController alloc] initWithNibName:@"TDTasksViewController" bundle:nil];
     viewController.managedObjectContext = self.managedObjectContext;
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    //self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.navigationController;
+    //self.window.rootViewController = self.navigationController;
+    self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     
     return YES;

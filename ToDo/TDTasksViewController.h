@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TDTasksViewController : UITableViewController
+@interface TDTasksViewController : UITableViewController <UITextFieldDelegate>
 
 @property NSManagedObjectContext *managedObjectContext;
+@property IBOutlet UITextField *taskTextField;
+@property BOOL isKeyboardOnTheScreen;
 
 @end

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9F97E7569BC741E28F579A45 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3314316CD92F4B66BC518CDD /* libPods.a */; };
+		E64BC1A1166C9D0200F59A30 /* TDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64BC19F166C9D0200F59A30 /* TDLoginViewController.m */; };
+		E64BC1A2166C9D0200F59A30 /* TDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64BC1A0166C9D0200F59A30 /* TDLoginViewController.xib */; };
+		E64BC1A5166C9D1500F59A30 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64BC1A4166C9D1500F59A30 /* Storyboard.storyboard */; };
 		E6861E2C166973530040DFAD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6861E2B166973530040DFAD /* UIKit.framework */; };
 		E6861E2E166973530040DFAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6861E2D166973530040DFAD /* Foundation.framework */; };
 		E6861E30166973530040DFAD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6861E2F166973530040DFAD /* CoreGraphics.framework */; };
@@ -24,10 +27,15 @@
 		E6861E51166973540040DFAD /* ToDoIncrementalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E6861E50166973540040DFAD /* ToDoIncrementalStore.m */; };
 		E6F0AAD8166A10400025C1A5 /* TDTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F0AAD6166A10400025C1A5 /* TDTasksViewController.m */; };
 		E6F0AAD9166A10400025C1A5 /* TDTasksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F0AAD7166A10400025C1A5 /* TDTasksViewController.xib */; };
+		E6F0AADD166A59C70025C1A5 /* TDTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F0AADC166A59C70025C1A5 /* TDTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3314316CD92F4B66BC518CDD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E64BC19E166C9D0200F59A30 /* TDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLoginViewController.h; sourceTree = "<group>"; };
+		E64BC19F166C9D0200F59A30 /* TDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLoginViewController.m; sourceTree = "<group>"; };
+		E64BC1A0166C9D0200F59A30 /* TDLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDLoginViewController.xib; sourceTree = "<group>"; };
+		E64BC1A4166C9D1500F59A30 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		E6861E27166973530040DFAD /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6861E2B166973530040DFAD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E6861E2D166973530040DFAD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,6 +60,8 @@
 		E6F0AAD5166A10400025C1A5 /* TDTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTasksViewController.h; sourceTree = "<group>"; };
 		E6F0AAD6166A10400025C1A5 /* TDTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTasksViewController.m; sourceTree = "<group>"; };
 		E6F0AAD7166A10400025C1A5 /* TDTasksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDTasksViewController.xib; sourceTree = "<group>"; };
+		E6F0AADB166A59C70025C1A5 /* TDTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTask.h; sourceTree = "<group>"; };
+		E6F0AADC166A59C70025C1A5 /* TDTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,10 @@
 				E6F0AAD5166A10400025C1A5 /* TDTasksViewController.h */,
 				E6F0AAD6166A10400025C1A5 /* TDTasksViewController.m */,
 				E6F0AAD7166A10400025C1A5 /* TDTasksViewController.xib */,
+				E64BC19E166C9D0200F59A30 /* TDLoginViewController.h */,
+				E64BC19F166C9D0200F59A30 /* TDLoginViewController.m */,
+				E64BC1A0166C9D0200F59A30 /* TDLoginViewController.xib */,
+				E64BC1A4166C9D1500F59A30 /* Storyboard.storyboard */,
 				E6861E38166973530040DFAD /* Networking */,
 				E6861E4B166973540040DFAD /* Models */,
 				E6861E36166973530040DFAD /* Supporting Files */,
@@ -145,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				E6861E4C166973540040DFAD /* ToDo.xcdatamodeld */,
+				E6F0AADB166A59C70025C1A5 /* TDTask.h */,
+				E6F0AADC166A59C70025C1A5 /* TDTask.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -208,6 +224,8 @@
 				E6861E48166973540040DFAD /* Default@2x.png in Resources */,
 				E6861E4A166973540040DFAD /* Default-568h@2x.png in Resources */,
 				E6F0AAD9166A10400025C1A5 /* TDTasksViewController.xib in Resources */,
+				E64BC1A2166C9D0200F59A30 /* TDLoginViewController.xib in Resources */,
+				E64BC1A5166C9D1500F59A30 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +259,8 @@
 				E6861E4E166973540040DFAD /* ToDo.xcdatamodeld in Sources */,
 				E6861E51166973540040DFAD /* ToDoIncrementalStore.m in Sources */,
 				E6F0AAD8166A10400025C1A5 /* TDTasksViewController.m in Sources */,
+				E6F0AADD166A59C70025C1A5 /* TDTask.m in Sources */,
+				E64BC1A1166C9D0200F59A30 /* TDLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
