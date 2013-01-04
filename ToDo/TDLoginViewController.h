@@ -10,4 +10,10 @@
 
 @interface TDLoginViewController : UIViewController
 
+@property NSManagedObjectContext *managedObjectContext;
+@property IBOutlet UITextField *loginTF;
+@property IBOutlet UITextField *passwordTF;
+
+- (void)loadNewController:(id)sender;
+
 @end

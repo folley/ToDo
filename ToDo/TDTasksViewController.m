@@ -18,7 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"ToDo", nil);
+    self.title = @"ToDo";
+    
+    
+    /*
+     Update Error: Error Domain=AFNetworkingErrorDomain Code=-1011 "Expected status code in (200-299), got 406" UserInfo=0x837de80 {NSLocalizedRecoverySuggestion={"errors":{}}, AFNetworkingOperationFailingURLRequestErrorKey=<NSMutableURLRequest http://afternoon-wildwood-9932.herokuapp.com/tasks/86>, NSErrorFailingURLKey=http://afternoon-wildwood-9932.herokuapp.com/tasks/86, NSLocalizedDescription=Expected status code in (200-299), got 406, AFNetworkingOperationFailingURLResponseErrorKey=<NSHTTPURLResponse: 0x813f7d0>}
+     */
+    
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Task"];
     fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"completedAt" ascending:YES]];
@@ -57,7 +63,7 @@
     TDTask *task = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = task.text;
     cell.textLabel.textColor = [task isCompleted] ? [UIColor lightGrayColor] : [UIColor blackColor];
-    cell.textLabel.text = [NSString stringWithFormat:@"%d: %@", indexPath.row+1,task.text];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", task.text];
 }
 
 #pragma mark - UITableViewDelegate
@@ -65,11 +71,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.managedObjectContext performBlock:^{
         TDTask *task = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        if (task.completed)
+        if (task.completed) {
             [self.managedObjectContext deleteObject:task];
-        if (!task.completed)
+            [self.managedObjectContext save:nil];
+            NSLog(@"task DELETED");
+        }
+        if (!task.completed) {
             task.completed = !task.completed;
-        [self.managedObjectContext save:nil];
+            [self.managedObjectContext save:nil];
+            NSLog(@"task COMPLETED");
+        }
     }];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -135,11 +146,13 @@
                                           inManagedObjectContext:self.managedObjectContext];
         
         if ([text isEqualToString:@""]) {
-            [self.tableView reloadData];
+            //[self.tableView reloadData];
              [managedObject setValue:@"BAZINGA" forKey:@"text"];
         }
-        else
+        else {
             [managedObject setValue:text forKey:@"text"];
+        }
+        NSLog(@"task DODANY");
         [self.managedObjectContext save:nil];
     }];
     return YES;

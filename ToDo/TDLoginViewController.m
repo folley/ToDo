@@ -7,6 +7,7 @@
 //
 
 #import "TDLoginViewController.h"
+#import "TDTasksViewController.h"
 
 @interface TDLoginViewController ()
 
@@ -26,13 +27,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    NSLog(@"123");
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadNewController:(id)sender {
+    [self performSegueWithIdentifier:@"goToTasks" sender:sender];
+}
+
+- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+    TDTasksViewController *tasksVC = [storyboard instantiateViewControllerWithIdentifier:@"TDTasksViewController"];
+    tasksVC.managedObjectContext = self.managedObjectContext;
+    
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:identifier source:self destination:tasksVC];
+    [self prepareForSegue:segue sender:sender];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"goToTasks"]) {
+        //[segue.destinationViewController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+        [self presentModalViewController:segue.destinationViewController animated:NO];
+    }
 }
 
 @end

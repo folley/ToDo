@@ -249,10 +249,14 @@ static NSString * AFPluralizedString(NSString *string) {
 }
 
 - (NSMutableURLRequest *)requestForInsertedObject:(NSManagedObject *)insertedObject {
+    NSLog(@"request for INSTERTED object polecial");
+    
     return [self requestWithMethod:@"POST" path:[self pathForEntity:insertedObject.entity] parameters:[self representationOfAttributes:[insertedObject dictionaryWithValuesForKeys:[insertedObject.entity.attributesByName allKeys]] ofManagedObject:insertedObject]];
 }
 
 - (NSMutableURLRequest *)requestForUpdatedObject:(NSManagedObject *)updatedObject {
+    NSLog(@"request for UPDATED object polecial");
+    
     NSMutableSet *mutableChangedAttributeKeys = [NSMutableSet setWithArray:[[updatedObject changedValues] allKeys]];
     [mutableChangedAttributeKeys intersectSet:[NSSet setWithArray:[updatedObject.entity.attributesByName allKeys]]];
     
@@ -260,6 +264,7 @@ static NSString * AFPluralizedString(NSString *string) {
 }
 
 - (NSMutableURLRequest *)requestForDeletedObject:(NSManagedObject *)deletedObject {
+    NSLog(@"request for DELETED object polecial");
     return [self requestWithMethod:@"DELETE" path:[self pathForObject:deletedObject] parameters:nil];
 }
 

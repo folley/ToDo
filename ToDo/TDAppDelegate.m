@@ -9,6 +9,7 @@
 #import "TDAppDelegate.h"
 
 #import "TDTasksViewController.h"
+#import "TDLoginViewController.h"
 
 #import "AFNetworkActivityIndicatorManager.h"
 
@@ -27,6 +28,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
     TDTasksViewController *viewController = [[TDTasksViewController alloc] initWithNibName:@"TDTasksViewController" bundle:nil];
+    
+    //TDLoginViewController *viewController = [[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil] instantiateViewControllerWithIdentifier:@"TDLoginViewController"];
+    
+    
+    
     viewController.managedObjectContext = self.managedObjectContext;
     //self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     

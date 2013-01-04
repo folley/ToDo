@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9F97E7569BC741E28F579A45 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3314316CD92F4B66BC518CDD /* libPods.a */; };
 		E64BC1A1166C9D0200F59A30 /* TDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E64BC19F166C9D0200F59A30 /* TDLoginViewController.m */; };
-		E64BC1A2166C9D0200F59A30 /* TDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64BC1A0166C9D0200F59A30 /* TDLoginViewController.xib */; };
 		E64BC1A5166C9D1500F59A30 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64BC1A4166C9D1500F59A30 /* Storyboard.storyboard */; };
 		E6861E2C166973530040DFAD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6861E2B166973530040DFAD /* UIKit.framework */; };
 		E6861E2E166973530040DFAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6861E2D166973530040DFAD /* Foundation.framework */; };
@@ -34,7 +33,6 @@
 		3314316CD92F4B66BC518CDD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64BC19E166C9D0200F59A30 /* TDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDLoginViewController.h; sourceTree = "<group>"; };
 		E64BC19F166C9D0200F59A30 /* TDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDLoginViewController.m; sourceTree = "<group>"; };
-		E64BC1A0166C9D0200F59A30 /* TDLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDLoginViewController.xib; sourceTree = "<group>"; };
 		E64BC1A4166C9D1500F59A30 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		E6861E27166973530040DFAD /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6861E2B166973530040DFAD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -121,7 +119,6 @@
 				E6F0AAD7166A10400025C1A5 /* TDTasksViewController.xib */,
 				E64BC19E166C9D0200F59A30 /* TDLoginViewController.h */,
 				E64BC19F166C9D0200F59A30 /* TDLoginViewController.m */,
-				E64BC1A0166C9D0200F59A30 /* TDLoginViewController.xib */,
 				E64BC1A4166C9D1500F59A30 /* Storyboard.storyboard */,
 				E6861E38166973530040DFAD /* Networking */,
 				E6861E4B166973540040DFAD /* Models */,
@@ -224,7 +221,6 @@
 				E6861E48166973540040DFAD /* Default@2x.png in Resources */,
 				E6861E4A166973540040DFAD /* Default-568h@2x.png in Resources */,
 				E6F0AAD9166A10400025C1A5 /* TDTasksViewController.xib in Resources */,
-				E64BC1A2166C9D0200F59A30 /* TDLoginViewController.xib in Resources */,
 				E64BC1A5166C9D1500F59A30 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
